@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -16,7 +17,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >
+        <header>
+          My app
+        </header>
+        <header><Link href ="/profile">profile</Link> <Link href ="/">Home</Link> <Link href ="/products">products</Link> <Link href ="/order-product">Order</Link> <Link href ="/settings">settings</Link></header>
+        <br />
+        {children}
+        <br />
+        <footer>
+          contact us
+        </footer>
+        </body>
     </html>
   );
 }

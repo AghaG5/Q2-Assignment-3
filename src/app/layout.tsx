@@ -18,15 +18,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        <header>
-          My app
+        <header  className=" backg">
+           <div className="text-5xl text black">
+              My app
+           </div>        
+       <br />
+           <div className="display flex justify-around linkin"> 
+            <Link href ="/profile"className="">profile</Link> <Link href ="/">Home</Link> <Link href ="/products">products</Link> <Link href ="/order-product">Order</Link> <Link href ="/settings">settings</Link>
+
+           </div>
         </header>
-        <header><Link href ="/profile">profile</Link> <Link href ="/">Home</Link> <Link href ="/products">products</Link> <Link href ="/order-product">Order</Link> <Link href ="/settings">settings</Link></header>
-        <br />
-        {children}
-        <br />
-        <footer>
-          contact us
+       
+              {children}
+      
+        <footer  className="backg">
+          <div className="text-4xl text black"> 
+            contact us 
+          </div>
         </footer>
         </body>
     </html>

@@ -1,16 +1,19 @@
 "use client"
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 export default function order(){
     const router = useRouter()
     const handleClick = () =>{
         console.log("Placing your order")
-        router.push("/products")        
+        router.push("/")        
     }
     return(
-        <div>
-            <h1>Order your product</h1>
+        <div className="backgw">
+            <h1 >Order your product</h1>
             <br />
-            <button onClick={handleClick}>place order</button>
+            <p>Obviously this is just an assignment so im using a hook on placing order by pressing it you wil go the home page. </p>
+            <br />
+            <Button onClick={handleClick}>place order</Button>
         </div>
     )
 }
